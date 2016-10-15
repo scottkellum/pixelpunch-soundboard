@@ -10,29 +10,59 @@
   <body>
 
   <div class="buttons">
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
-    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('1')"></button>
+    <button onclick="soundboard('2')"></button>
+    <button onclick="soundboard('3')"></button>
+    <button onclick="soundboard('4')"></button>
+
+    <button onclick="soundboard('q')"></button>
+    <button onclick="soundboard('w')"></button>
+    <button onclick="soundboard('e')"></button>
+    <button onclick="soundboard('r')"></button>
+
+    <button onclick="soundboard('a')"></button>
+    <button onclick="soundboard('s')"></button>
+    <button onclick="soundboard('d')"></button>
+    <button onclick="soundboard('f')"></button>
+
+    <button onclick="soundboard('z')"></button>
+    <button onclick="soundboard('x')"></button>
+    <button onclick="soundboard('c')"></button>
+    <button onclick="soundboard('v')"></button>
   </div>
 
 <script>
+// key
+var key = {
+  1: 'door',
+  2: 'door',
+  3: 'door',
+  4: 'door',
+
+  q: 'door',
+  w: 'door',
+  e: 'door',
+  r: 'door',
+
+  a: 'door',
+  s: 'door',
+  d: 'door',
+  f: 'door',
+
+  z: 'door',
+  x: 'door',
+  c: 'door',
+  v: 'door'
+};
+
 function soundboard(v) {
-  var audio = new Audio('sound/' + v + '.mp3');
+  var audio = new Audio('sound/' + key.v + '.mp3');
   audio.play();
 }
+
+document.onkeydown = function() {
+  soundboard(window.event.key);
+};
 </script>
 
 <style>
