@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>PPIII SOUNDTRONIC</title>
+  </head>
+
+  <body>
+
+  <div class="buttons">
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+    <button onclick="soundboard('door')"></button>
+  </div>
+
+<script>
+function soundboard(v) {
+  var audio = new Audio('sound/' + v + '.mp3');
+  audio.play();
+}
+</script>
+
+<style>
+  body {
+    background-color: #0C0C0C;
+    padding: 5% 0 15%;
+    display: table;
+    margin: auto;
+    line-height: 1.4;
+    width: 90%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  button {
+    display: block;
+    min-width: 23%;
+    flex: 1;
+    background: #333;
+    border: none;
+    margin: 3px;
+    padding: 0 0 23% 0;
+    border-radius: 4%;
+    border: 1px solid #222;
+    border-color: rgba(255,255,255,.2) #222 #111;
+    box-shadow:
+      0 0 1px 1px #000,
+      0 2px 6px 1px rgba(0,0,0,.5),
+      inset 0 0 8vw 5px rgba(0,0,0,.5);
+  }
+  button:active {
+    background-color: #C65718;
+    box-shadow:
+      0 0 1px 1px #000,
+      0 2px 6px 1px rgba(0,0,0,.5),
+      0 0 12px 2px rgba(184,67,20,.5),
+      inset 0 0 8vw 5px rgba(0,0,0,.8);
+  }
+  button:focus {
+    outline: none;
+  }
+</style>
+  </body>
+</html>
